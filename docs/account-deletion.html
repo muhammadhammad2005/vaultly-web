@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vaultly Account Deletion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f0f2f8;
+        --surface: #ffffff;
+        --surface-muted: #f6f7fc;
+        --text: #1a1a2e;
+        --muted: #8388a0;
+        --line: #e8eaf3;
+        --primary-1: #7c3aed;
+        --primary-2: #9b59d8;
+        --expense: #ff6b8a;
+        --warm: #ff9a5c;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background:
+          radial-gradient(circle at top left, rgba(255, 107, 138, 0.14), transparent 28%),
+          radial-gradient(circle at top right, rgba(124, 58, 237, 0.14), transparent 30%),
+          linear-gradient(180deg, #fafbff 0%, var(--bg) 100%);
+        color: var(--text);
+        font: 16px/1.7 "Poppins", sans-serif;
+      }
+      a {
+        color: var(--primary-1);
+        text-decoration: none;
+      }
+      .shell {
+        width: min(1040px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 28px 0 64px;
+      }
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 16px;
+        color: var(--primary-1);
+        font-weight: 700;
+      }
+      .hero {
+        position: relative;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at top left, rgba(255, 255, 255, 0.2), transparent 28%),
+          linear-gradient(135deg, var(--expense), var(--warm));
+        border-radius: 30px;
+        padding: 28px;
+        color: white;
+        box-shadow: 0 24px 60px rgba(207, 93, 124, 0.24);
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        right: -62px;
+        top: -62px;
+        width: 210px;
+        height: 210px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.08);
+      }
+      .hero-top {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.14);
+        font-size: 0.88rem;
+        font-weight: 700;
+      }
+      .tag-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: white;
+      }
+      .hero h1 {
+        max-width: 760px;
+        margin: 18px 0 8px;
+        font-size: clamp(2rem, 4vw, 3.1rem);
+        line-height: 1.08;
+      }
+      .hero p {
+        max-width: 760px;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.9);
+      }
+      .hero-meta {
+        margin-top: 18px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .meta-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: rgba(40, 18, 22, 0.18);
+        color: white;
+        font-size: 0.92rem;
+        font-weight: 600;
+      }
+      .content {
+        display: grid;
+        gap: 16px;
+        margin-top: 20px;
+      }
+      .section-card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 26px;
+        padding: 24px;
+        box-shadow: 0 20px 50px rgba(15, 23, 42, 0.06);
+      }
+      .section-card h2 {
+        margin: 0 0 12px;
+        font-size: 1.2rem;
+      }
+      .section-card p {
+        margin: 0;
+        color: var(--muted);
+      }
+      .list-grid {
+        display: grid;
+        gap: 12px;
+      }
+      .list-item {
+        background: var(--surface-muted);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 14px 16px;
+        color: var(--muted);
+      }
+      .list-item strong {
+        color: var(--text);
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 18px;
+      }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 0 18px;
+        border-radius: 14px;
+        text-decoration: none;
+        font-weight: 700;
+      }
+      .button.primary {
+        background: linear-gradient(135deg, var(--primary-1), var(--primary-2));
+        color: white;
+      }
+      .button.secondary {
+        background: var(--surface-muted);
+        border: 1px solid var(--line);
+        color: var(--text);
+      }
+      .note {
+        border-left: 4px solid var(--expense);
+        padding-left: 14px;
+      }
+      .footer {
+        margin-top: 18px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      @media (max-width: 640px) {
+        .shell {
+          width: min(100% - 24px, 1040px);
+          padding-top: 18px;
+        }
+        .hero,
+        .section-card {
+          border-radius: 24px;
+        }
+        .hero {
+          padding: 22px;
+        }
+        .section-card {
+          padding: 20px;
+        }
+        .hero h1 {
+          font-size: 2rem;
+        }
+        .actions .button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <a class="back-link" href="./index.html">Back to Legal</a>
+
+      <section class="hero">
+        <div class="hero-top">
+          <span class="tag"><span class="tag-dot"></span> Vaultly Account Deletion</span>
+        </div>
+        <h1>Account Deletion</h1>
+        <p>
+          This page explains how to request deletion of your Vaultly account,
+          what information is removed, and what may be retained when required.
+        </p>
+        <div class="hero-meta">
+          <span class="meta-pill">Request deletion</span>
+          <span class="meta-pill">Delete inside the app</span>
+          <span class="meta-pill">Retention details</span>
+        </div>
+      </section>
+
+      <section class="content">
+        <article class="section-card">
+          <h2>Request Deletion by Email</h2>
+          <div class="list-grid">
+            <div class="list-item">Send an email to <a href="mailto:vaultly.app@gmail.com">vaultly.app@gmail.com</a>.</div>
+            <div class="list-item">Use the subject line <strong>Vaultly Account Deletion Request</strong>.</div>
+            <div class="list-item">Include the email address used by your Vaultly account so the request can be verified.</div>
+          </div>
+          <div class="actions">
+            <a
+              class="button primary"
+              href="mailto:vaultly.app@gmail.com?subject=Vaultly%20Account%20Deletion%20Request&body=Please%20delete%20my%20Vaultly%20account.%20My%20Vaultly%20account%20email%20is%3A%20"
+            >
+              Start Deletion Request
+            </a>
+          </div>
+        </article>
+
+        <article class="section-card">
+          <h2>Delete Inside The App</h2>
+          <p>
+            If you still have access to the app, open
+            <strong>Settings &gt; Account &gt; Delete Account</strong> to
+            permanently remove your synced account and cloud data directly from
+            the app.
+          </p>
+        </article>
+
+        <article class="section-card">
+          <h2>What Gets Deleted</h2>
+          <div class="list-grid">
+            <div class="list-item">Account profile data.</div>
+            <div class="list-item">Synchronized transactions, budgets, recurring plans, and preferences associated with the account.</div>
+            <div class="list-item">Push device registrations associated with the account.</div>
+            <div class="list-item">Google Play entitlement records linked to the deleted account, except where records must be temporarily retained for billing or fraud-prevention purposes.</div>
+          </div>
+        </article>
+
+        <article class="section-card">
+          <h2>Important Notes</h2>
+          <div class="list-grid">
+            <div class="list-item note">Deleting your Vaultly account does not automatically cancel an active Google Play subscription. Subscription management and cancellation remain in Google Play.</div>
+            <div class="list-item">Vaultly may temporarily retain limited records when required for fraud prevention, billing disputes, security investigations, or legal compliance. These cases are handled for the minimum period reasonably required.</div>
+          </div>
+        </article>
+      </section>
+
+      <p class="footer">
+        Support: <a href="mailto:vaultly.app@gmail.com">vaultly.app@gmail.com</a>
+      </p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vaultly Legal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f0f2f8;
+        --surface: #ffffff;
+        --surface-muted: #f6f7fc;
+        --text: #1a1a2e;
+        --muted: #7f869b;
+        --line: #e8eaf3;
+        --primary-1: #7c3aed;
+        --primary-2: #9b59d8;
+        --income: #00c6ae;
+        --expense: #ff6b8a;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background:
+          radial-gradient(circle at top left, rgba(124, 58, 237, 0.16), transparent 28%),
+          radial-gradient(circle at top right, rgba(155, 89, 216, 0.12), transparent 26%),
+          linear-gradient(180deg, #f8f9ff 0%, var(--bg) 100%);
+        color: var(--text);
+        font: 16px/1.6 "Poppins", sans-serif;
+      }
+      .shell {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 32px 0 64px;
+      }
+      .hero {
+        position: relative;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at top left, rgba(255, 255, 255, 0.22), transparent 26%),
+          linear-gradient(135deg, var(--primary-1), var(--primary-2));
+        border-radius: 30px;
+        padding: 28px;
+        color: white;
+        box-shadow: 0 24px 60px rgba(92, 40, 176, 0.28);
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        right: -72px;
+        top: -72px;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.08);
+      }
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.16);
+        font-size: 0.9rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+      .brand-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: white;
+        box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.16);
+      }
+      .hero h1 {
+        max-width: 760px;
+        margin: 18px 0 10px;
+        font-size: clamp(2rem, 4vw, 3.35rem);
+        line-height: 1.06;
+      }
+      .hero p {
+        max-width: 700px;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.84);
+      }
+      .hero-row {
+        margin-top: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: rgba(18, 18, 18, 0.14);
+        color: white;
+        font-size: 0.92rem;
+        font-weight: 600;
+      }
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+      }
+      .dot.income {
+        background: var(--income);
+      }
+      .dot.expense {
+        background: var(--expense);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 18px;
+        margin-top: 22px;
+      }
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        padding: 24px;
+        box-shadow: 0 20px 50px rgba(15, 23, 42, 0.06);
+      }
+      .card-top {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .icon-wrap {
+        width: 56px;
+        height: 56px;
+        border-radius: 18px;
+        display: grid;
+        place-items: center;
+        color: white;
+        font-size: 1.35rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, var(--primary-1), var(--primary-2));
+      }
+      .icon-wrap.deletion {
+        background: linear-gradient(135deg, #ff6b8a, #ff9a5c);
+      }
+      .eyebrow {
+        margin: 0 0 2px;
+        color: var(--muted);
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+      .card h2 {
+        margin: 0;
+        font-size: 1.45rem;
+      }
+      .card p {
+        margin: 16px 0 0;
+        color: var(--muted);
+      }
+      .feature-list {
+        display: grid;
+        gap: 10px;
+        margin: 18px 0 0;
+      }
+      .feature {
+        background: var(--surface-muted);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 12px 14px;
+        color: var(--muted);
+      }
+      .feature strong {
+        color: var(--text);
+      }
+      .action-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 20px;
+      }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 0 18px;
+        border-radius: 14px;
+        text-decoration: none;
+        font-weight: 700;
+      }
+      .button.primary {
+        background: linear-gradient(135deg, var(--primary-1), var(--primary-2));
+        color: white;
+      }
+      .button.secondary {
+        border: 1px solid var(--line);
+        background: var(--surface-muted);
+        color: var(--text);
+      }
+      .footer {
+        margin-top: 18px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      .footer a {
+        color: var(--primary-1);
+        text-decoration: none;
+        font-weight: 700;
+      }
+      @media (max-width: 640px) {
+        .shell {
+          width: min(100% - 24px, 1120px);
+          padding-top: 20px;
+        }
+        .hero,
+        .card {
+          border-radius: 24px;
+        }
+        .hero {
+          padding: 22px;
+        }
+        .card {
+          padding: 20px;
+        }
+        .hero h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div class="brand">
+          <span class="brand-dot"></span>
+          Vaultly Legal
+        </div>
+        <h1>Legal Information for Vaultly.</h1>
+        <p>
+          Review Vaultly's Privacy Policy and account deletion information.
+          These pages explain how information is handled in the app and the
+          options available to account holders.
+        </p>
+        <div class="hero-row">
+          <span class="pill"><span class="dot income"></span> Privacy Policy</span>
+          <span class="pill"><span class="dot expense"></span> Account Deletion</span>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <div class="card-top">
+            <div class="icon-wrap">P</div>
+            <div>
+              <p class="eyebrow">Policy</p>
+              <h2>Privacy Policy</h2>
+            </div>
+          </div>
+          <p>
+            Learn what information Vaultly collects, how it is used, when it
+            may be shared, and the choices available to you.
+          </p>
+          <div class="feature-list">
+            <div class="feature"><strong>Includes:</strong> account information, transaction data, purchases, notifications, and security settings.</div>
+            <div class="feature"><strong>Covers:</strong> data use, retention, deletion options, and your privacy choices.</div>
+          </div>
+          <div class="action-row">
+            <a class="button primary" href="./privacy-policy.html">Open Privacy Policy</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="icon-wrap deletion">D</div>
+            <div>
+              <p class="eyebrow">Support</p>
+              <h2>Account Deletion</h2>
+            </div>
+          </div>
+          <p>
+            Review how to request deletion of your Vaultly account, what
+            information is removed, and what may be retained when required.
+          </p>
+          <div class="feature-list">
+            <div class="feature"><strong>Includes:</strong> email request instructions, in-app deletion, and deleted data categories.</div>
+            <div class="feature"><strong>Important:</strong> active subscriptions are managed separately through Google Play.</div>
+          </div>
+          <div class="action-row">
+            <a class="button primary" href="./account-deletion.html">Open Account Deletion</a>
+          </div>
+        </article>
+      </section>
+
+      <p class="footer">
+        Support: <a href="mailto:vaultly.app@gmail.com">vaultly.app@gmail.com</a>
+      </p>
+    </main>
+  </body>
+</html>

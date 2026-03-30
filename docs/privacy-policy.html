@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vaultly Privacy Policy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f0f2f8;
+        --surface: #ffffff;
+        --surface-muted: #f6f7fc;
+        --text: #1a1a2e;
+        --muted: #8388a0;
+        --line: #e8eaf3;
+        --primary-1: #7c3aed;
+        --primary-2: #9b59d8;
+        --income: #00c6ae;
+        --expense: #ff6b8a;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background:
+          radial-gradient(circle at top left, rgba(124, 58, 237, 0.16), transparent 30%),
+          radial-gradient(circle at top right, rgba(255, 107, 138, 0.12), transparent 24%),
+          linear-gradient(180deg, #f8f9ff 0%, var(--bg) 100%);
+        color: var(--text);
+        font: 16px/1.7 "Poppins", sans-serif;
+      }
+      a {
+        color: var(--primary-1);
+        text-decoration: none;
+      }
+      .shell {
+        width: min(1040px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 28px 0 64px;
+      }
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 16px;
+        color: var(--primary-1);
+        font-weight: 700;
+      }
+      .hero {
+        position: relative;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at top left, rgba(255, 255, 255, 0.24), transparent 28%),
+          linear-gradient(135deg, var(--primary-1), var(--primary-2));
+        border-radius: 30px;
+        padding: 28px;
+        color: white;
+        box-shadow: 0 24px 60px rgba(92, 40, 176, 0.26);
+      }
+      .hero::after {
+        content: "";
+        position: absolute;
+        right: -60px;
+        top: -60px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.08);
+      }
+      .hero-top {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.14);
+        font-size: 0.88rem;
+        font-weight: 700;
+      }
+      .tag-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: white;
+      }
+      .hero h1 {
+        max-width: 760px;
+        margin: 18px 0 8px;
+        font-size: clamp(2rem, 4vw, 3.1rem);
+        line-height: 1.08;
+      }
+      .hero p {
+        max-width: 760px;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.86);
+      }
+      .hero-meta {
+        margin-top: 18px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .meta-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: rgba(21, 18, 36, 0.18);
+        color: white;
+        font-size: 0.92rem;
+        font-weight: 600;
+      }
+      .meta-pill .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+      }
+      .dot.sync {
+        background: var(--income);
+      }
+      .dot.billing {
+        background: var(--expense);
+      }
+      .content {
+        display: grid;
+        gap: 16px;
+        margin-top: 20px;
+      }
+      .section-card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 26px;
+        padding: 24px;
+        box-shadow: 0 20px 50px rgba(15, 23, 42, 0.06);
+      }
+      .section-card h2 {
+        margin: 0 0 12px;
+        font-size: 1.2rem;
+      }
+      .section-card p {
+        margin: 0;
+        color: var(--muted);
+      }
+      .list-grid {
+        display: grid;
+        gap: 12px;
+      }
+      .list-item {
+        background: var(--surface-muted);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 14px 16px;
+        color: var(--muted);
+      }
+      .list-item strong {
+        color: var(--text);
+      }
+      .note {
+        border-left: 4px solid var(--primary-1);
+        padding-left: 14px;
+      }
+      .footer {
+        margin-top: 18px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      @media (max-width: 640px) {
+        .shell {
+          width: min(100% - 24px, 1040px);
+          padding-top: 18px;
+        }
+        .hero,
+        .section-card {
+          border-radius: 24px;
+        }
+        .hero {
+          padding: 22px;
+        }
+        .section-card {
+          padding: 20px;
+        }
+        .hero h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <a class="back-link" href="./index.html">Back to Legal</a>
+
+      <section class="hero">
+        <div class="hero-top">
+          <span class="tag"><span class="tag-dot"></span> Vaultly Privacy Policy</span>
+        </div>
+        <h1>Privacy Policy</h1>
+        <p>
+          This Privacy Policy describes how Vaultly collects, uses, stores, and
+          shares information when you use the app.
+        </p>
+        <div class="hero-meta">
+          <span class="meta-pill"><span class="dot sync"></span> Account information</span>
+          <span class="meta-pill"><span class="dot billing"></span> Financial data</span>
+          <span class="meta-pill">Notifications &amp; purchases</span>
+        </div>
+      </section>
+
+      <section class="content">
+        <article class="section-card">
+          <h2>Overview</h2>
+          <p>
+            This Privacy Policy explains what data Vaultly may collect, how it
+            may be used, when it may be shared, and how users can request
+            deletion. Privacy questions can be sent to
+            <a href="mailto:vaultly.app@gmail.com">vaultly.app@gmail.com</a>.
+          </p>
+        </article>
+
+        <article class="section-card">
+          <h2>Data We Collect</h2>
+          <div class="list-grid">
+            <div class="list-item"><strong>Account information:</strong> email address, authentication state, and profile details you provide.</div>
+            <div class="list-item"><strong>Financial content:</strong> transactions, budgets, recurring plans, categories, summaries, and app preferences saved to your account.</div>
+            <div class="list-item"><strong>Security settings:</strong> app-lock preferences, biometric preference, and related device-level security choices.</div>
+            <div class="list-item"><strong>Notification data:</strong> push notification token, notification preference, and time zone when notifications are enabled.</div>
+            <div class="list-item"><strong>Purchase data:</strong> product identifiers, purchase tokens, and entitlement status used to verify Google Play subscriptions, lifetime purchases, and premium access.</div>
+            <div class="list-item"><strong>Support data:</strong> messages or details you share when contacting support.</div>
+          </div>
+        </article>
+
+        <article class="section-card">
+          <h2>How We Use Data</h2>
+          <div class="list-grid">
+            <div class="list-item">To create and maintain your account.</div>
+            <div class="list-item">To sync your data across supported devices.</div>
+            <div class="list-item">To deliver reminders, summaries, and push notifications.</div>
+            <div class="list-item">To verify Google Play purchases and manage premium entitlements.</div>
+            <div class="list-item">To protect account access, assist with account recovery, and improve security.</div>
+            <div class="list-item">To provide customer support, diagnose issues, and prevent abuse, fraud, or unauthorized activity.</div>
+          </div>
+        </article>
+
+        <article class="section-card">
+          <h2>How Data May Be Shared</h2>
+          <div class="list-grid">
+            <div class="list-item"><strong>Supabase</strong> is used for account authentication, data storage, synchronization, and server functions.</div>
+            <div class="list-item"><strong>Google Play</strong> is used for billing and purchase verification.</div>
+            <div class="list-item"><strong>Firebase Cloud Messaging</strong> is used to deliver push notifications.</div>
+            <div class="list-item">Data may also be disclosed if required to comply with law, legal process, or to protect users, the service, or the public.</div>
+          </div>
+        </article>
+
+        <article class="section-card">
+          <h2>Retention &amp; Deletion</h2>
+          <div class="list-grid">
+            <div class="list-item">Vaultly keeps account and app data for as long as needed to provide the service, maintain your account, support legitimate business operations, resolve disputes, and meet legal or security obligations.</div>
+            <div class="list-item">You can delete your account from inside the app or by using the account deletion page.</div>
+            <div class="list-item note">When an account deletion request is completed, Vaultly removes synchronized account data unless temporary retention is required for fraud prevention, billing disputes, security investigations, chargeback handling, or legal compliance.</div>
+            <div class="list-item">Deleting a Vaultly account does not automatically cancel an active Google Play subscription. Subscription management and cancellation remain in Google Play.</div>
+          </div>
+        </article>
+
+        <article class="section-card">
+          <h2>Security and Your Choices</h2>
+          <div class="list-grid">
+            <div class="list-item">Vaultly uses authenticated services for synced account data, disables Android backups, blocks cleartext traffic, and supports app lock, PIN, biometric unlock, and secure-screen protections on supported devices.</div>
+            <div class="list-item">You can review and manage app preferences inside the app.</div>
+            <div class="list-item">You can disable notifications from inside the app or through your device settings.</div>
+            <div class="list-item">You can request account deletion from inside the app or through the public account deletion page.</div>
+          </div>
+        </article>
+
+        <article class="section-card">
+          <h2>Children's Privacy &amp; Policy Updates</h2>
+          <div class="list-grid">
+            <div class="list-item">Vaultly is not directed to children and is not intended for children under 13. If you believe a child has provided personal data in violation of applicable law, contact <a href="mailto:vaultly.app@gmail.com">vaultly.app@gmail.com</a>.</div>
+            <div class="list-item">Vaultly may update this Privacy Policy from time to time. Material changes will be reflected on this page by updating the effective date above.</div>
+          </div>
+        </article>
+      </section>
+
+      <p class="footer">
+        Support: <a href="mailto:vaultly.app@gmail.com">vaultly.app@gmail.com</a>
+      </p>
+    </main>
+  </body>
+</html>
