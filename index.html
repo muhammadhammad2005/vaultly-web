@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vaultly - Smart Expense Tracking for Android</title>
+  <meta name="description"
+    content="Track spending quickly, stay ahead of budgets, manage recurring payments, and protect sensitive financial data in one polished mobile app.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="icon/icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="navbar">
+    <div class="container nav-content">
+      <a href="#" class="logo-container">
+        <img src="icon/icon.png" alt="Vaultly Logo">
+        <span class="logo-text">Vaultly</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features" class="nav-item">Features</a>
+        <a href="#security" class="nav-item">Security</a>
+        <a href="#pro" class="nav-item">Pro</a>
+        <a href="#faq" class="nav-item">FAQ</a>
+        <a href="https://play.google.com/store/apps/details?id=app.vaultly.mobile" class="google-play-badge-sm"
+          target="_blank">
+          <img src="playstore-mark.svg" alt="Play Store" style="width: 16px;">
+          <div>
+            <span class="gp-label">GET IT ON</span>
+            <span class="gp-title">Google Play</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="container text-center">
+        <div class="hero-content reveal">
+          <span class="pill-badge"
+            style="display: inline-flex; align-items: center; justify-content: center; width: 60px; height: 60px; padding: 0; background: rgba(52, 168, 83, 0.08); border: 1px solid rgba(52, 168, 83, 0.2); border-radius: 16px; margin-bottom: 24px; box-shadow: 0 4px 16px rgba(52, 168, 83, 0.15);">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="#3DDC84">
+              <path
+                d="M17.52 15.34c0 0-.001 0-.002 0-.596 0-1.078-.472-1.078-1.055s.482-1.054 1.078-1.054c.597 0 1.08.472 1.08 1.054s-.483 1.055-1.078 1.055zm-11.043 0c-.596 0-1.078-.472-1.078-1.055s.482-1.054 1.078-1.054c.596 0 1.078.472 1.078 1.054s-.482 1.055-1.078 1.055zm11.29-5.862l1.83-3.17c.078-.135.032-.31-.103-.387-.135-.078-.31-.032-.387.103l-1.876 3.25c-1.54-.71-3.31-1.115-5.23-1.115s-3.69.405-5.23 1.115l-1.876-3.25c-.078-.135-.252-.18-.388-.103-.135.077-.18.252-.102.387l1.83 3.17c-3.538 1.932-5.955 5.532-6.214 9.753h23.958c-.258-4.22-2.675-7.82-6.213-9.753z" />
+            </svg>
+          </span>
+          <h1>Track every expense without losing the bigger picture.</h1>
+          <p>Vaultly helps you log spending quickly, stay ahead of budgets, manage recurring payments, review monthly
+            reports, and protect sensitive financial data in one polished Android experience.</p>
+          <div class="hero-ctas">
+            <a href="https://play.google.com/store/apps/details?id=app.vaultly.mobile" class="google-play-badge"
+              target="_blank">
+              <img src="playstore-mark.svg" alt="Play Store" style="width: 24px;">
+              <div>
+                <span class="gp-label">GET IT ON</span>
+                <span class="gp-title">Google Play</span>
+              </div>
+            </a>
+            <a href="#features" class="btn btn-outline">Explore Features</a>
+          </div>
+          <p class="text-support" style="font-size: 0.9rem;">Need help? <a href="mailto:vaultly.app@gmail.com"
+              class="text-primary" style="font-weight: 500;">vaultly.app@gmail.com</a></p>
+        </div>
+
+        <div class="hero-mockup-cluster reveal" style="transition-delay: 0.2s;">
+          <!-- Left: Billing Reports -->
+          <div class="mockup-wrapper-hero mockup-left">
+            <img src="First 3 mockup/left.png" alt="Vaultly Billing Reports" class="hero-mockup">
+            <div class="floor-shadow"></div>
+          </div>
+          <!-- Center: Home Dashboard -->
+          <div class="mockup-wrapper-hero mockup-center">
+            <img src="First 3 mockup/mid.png" alt="Vaultly Home Dashboard" class="hero-mockup">
+            <div class="floor-shadow"></div>
+          </div>
+          <!-- Right: Settings -->
+          <div class="mockup-wrapper-hero mockup-right">
+            <img src="First 3 mockup/right.png" alt="Vaultly Settings" class="hero-mockup">
+            <div class="floor-shadow"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Strip -->
+    <div class="trust-strip reveal">
+      <div class="container trust-brands">
+        <div class="trust-item"><span class="check-icon">✓</span> Android Only</div>
+        <div class="trust-item"><span class="check-icon">✓</span> Google Play Billing</div>
+        <div class="trust-item"><span class="check-icon">✓</span> Push Reminders</div>
+        <div class="trust-item"><span class="check-icon">✓</span> App Lock + Biometrics</div>
+        <div class="trust-item"><span class="check-icon">✓</span> Privacy Focused</div>
+      </div>
+    </div>
+
+    <!-- Feature Storytelling Section -->
+    <section id="features" class="section section-alt">
+      <div class="container">
+
+        <!-- Feature 1: Fast Daily Capture -->
+        <div class="feature-block reveal">
+          <div class="mockup-wrapper perspective-wrapper">
+            <img src="1st feature/mockup.png" alt="Vaultly Fast Capture"
+              class="feature-image feature-mockup-framed feature-mockup-tilted-left">
+            <div class="floor-shadow tilted-shadow"></div>
+          </div>
+          <div class="feature-content">
+            <span class="pill-badge">Speed & Simplicity</span>
+            <h3>Fast daily capture</h3>
+            <p>Record income and expenses in seconds with a focused, uncluttered interface. Every tap is optimized so
+              you spend less time tracking and more time living.</p>
+            <ul class="feature-list">
+              <li>
+                <div class="feature-icon">❖</div>
+                <div>
+                  <h4>Income/Expense Toggle</h4>
+                  <p>Instantly switch between adding income or logging a daily expense.</p>
+                </div>
+              </li>
+              <li>
+                <div class="feature-icon">❖</div>
+                <div>
+                  <h4>Quick Categories</h4>
+                  <p>Organize spending effortlessly with visual categories and icons.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Feature 2: Budget Clarity -->
+        <div class="feature-block reverse reveal">
+          <div class="mockup-wrapper perspective-wrapper">
+            <img src="2nd feature/mockup.png" alt="Vaultly Budget Tracking"
+              class="feature-image feature-mockup-framed feature-mockup-tilted-right">
+            <div class="floor-shadow tilted-shadow"></div>
+          </div>
+          <div class="feature-content">
+            <span class="pill-badge"
+              style="color: var(--expense-accent); background: rgba(255, 107, 138, 0.1);">Financial Control</span>
+            <h3>Budget clarity</h3>
+            <p>Monitor your monthly budgets efficiently. Vaultly calculates exactly how much you have left and warns you
+              before your limits are reached.</p>
+            <ul class="feature-list">
+              <li>
+                <div class="feature-icon" style="color: var(--expense-accent); background: rgba(255, 107, 138, 0.1);">❖
+                </div>
+                <div>
+                  <h4>Configurable Alerts</h4>
+                  <p>Get notified when your budget reaches 80%, 90%, or 100%.</p>
+                </div>
+              </li>
+              <li>
+                <div class="feature-icon" style="color: var(--expense-accent); background: rgba(255, 107, 138, 0.1);">❖
+                </div>
+                <div>
+                  <h4>Real-time Usage</h4>
+                  <p>See immediately how today's coffee affects your monthly allowance.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Feature 3: Recurring Plans -->
+        <div class="feature-block reveal">
+          <div class="mockup-wrapper perspective-wrapper">
+            <!-- Using new mockup for repeating bills summary with CSS tilt -->
+            <img src="3rd feature/mockup.png" alt="Vaultly Recurring Plans"
+              class="feature-image feature-mockup-framed feature-mockup-tilted-left">
+            <div class="floor-shadow tilted-shadow"></div>
+          </div>
+          <div class="feature-content">
+            <span class="pill-badge" style="color: var(--ocean); background: rgba(14, 165, 233, 0.1);">Automation</span>
+            <h3>Recurring plans & reminders</h3>
+            <p>Keep salary, bills, subscriptions, and reminders organized in one place. Never miss a payment or forget
+              your Netflix renewal date again.</p>
+            <ul class="feature-list">
+              <li>
+                <div class="feature-icon" style="color: var(--ocean); background: rgba(14, 165, 233, 0.1);">❖</div>
+                <div>
+                  <h4>Automated Logging</h4>
+                  <p>Set up recurring payments that log themselves exactly when due.</p>
+                </div>
+              </li>
+              <li>
+                <div class="feature-icon" style="color: var(--ocean); background: rgba(14, 165, 233, 0.1);">❖</div>
+                <div>
+                  <h4>Push Reminders</h4>
+                  <p>Get local and cloud notifications so you stay fully aware of upcoming bills.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Feature 4: Accent Colors -->
+        <div class="feature-block reverse reveal">
+          <div class="accent-cluster-wrapper">
+            <div class="mockup-cluster-diagonal perspective-wrapper">
+              <!-- 5 layered mockups forming a diagonal cascade -->
+              <img src="4th feature/5.png" alt="Amber Theme" class="feature-mockup-framed cluster-item item-5">
+              <img src="4th feature/4.png" alt="Ocean Theme" class="feature-mockup-framed cluster-item item-4">
+              <img src="4th feature/3.png" alt="Emerald Theme" class="feature-mockup-framed cluster-item item-3">
+              <img src="4th feature/2.png" alt="Coral Theme" class="feature-mockup-framed cluster-item item-2">
+              <img src="4th feature/1.png" alt="Purple Theme" class="feature-mockup-framed cluster-item item-1">
+            </div>
+
+            <!-- Floating accent color orbs with labels -->
+            <div class="accent-orb orb-purple" style="--orb-color: #9370DB; --orb-glow: rgba(147, 112, 219, 0.4);">
+              <span class="orb-label">Purple</span>
+            </div>
+            <div class="accent-orb orb-ocean" style="--orb-color: #1da2d8; --orb-glow: rgba(29, 162, 216, 0.4);">
+              <span class="orb-label">Ocean</span>
+            </div>
+            <div class="accent-orb orb-emerald" style="--orb-color: #50C878; --orb-glow: rgba(80, 200, 120, 0.4);">
+              <span class="orb-label">Emerald</span>
+            </div>
+            <div class="accent-orb orb-coral" style="--orb-color: #FF7F50; --orb-glow: rgba(255, 127, 80, 0.4);">
+              <span class="orb-label">Coral</span>
+            </div>
+            <div class="accent-orb orb-amber" style="--orb-color: #FFBF00; --orb-glow: rgba(255, 191, 0, 0.4);">
+              <span class="orb-label">Amber</span>
+            </div>
+          </div>
+          <div class="feature-content">
+            <span class="pill-badge"
+              style="color: #9370DB; background: rgba(147, 112, 219, 0.1);">Personalization</span>
+            <h3>Accent Colors</h3>
+            <p>Vaultly adapts to your style. Choose from a variety of beautiful accent colors to perfectly match your
+              mood and aesthetic across the entire app interface.</p>
+            <ul class="feature-list">
+              <li>
+                <div class="feature-icon" style="color: #9370DB; background: rgba(147, 112, 219, 0.1);">❖</div>
+                <div>
+                  <h4>Dynamic Theming</h4>
+                  <p>Instantly switch colors and watch the entire app seamlessly update its buttons, charts, and icons.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Theme Showcase Section (Floating mockups, NO boxes) -->
+    <section class="theme-showcase reveal text-center">
+      <div class="container">
+        <h2>Your finance app, your style.</h2>
+        <p style="font-size: 1.1rem; max-width: 650px; margin: 16px auto 0; line-height: 1.6;">
+          Enjoy your money management in the stunning Default Light mode, or switch to the incredibly sleek Dark mode.
+          It's built beautifully either way.
+        </p>
+
+        <div class="theme-showcase-grid">
+          <!-- Dark Mode (Left) -->
+          <div class="theme-column text-center">
+            <div class="mockup-wrapper-theme perspective-wrapper">
+              <img src="dark and white theme/left.png" alt="Vaultly Dark Theme"
+                class="feature-mockup-framed feature-mockup-tilted-left"
+                style="max-width: 280px; margin: 0 auto; display: block;">
+              <div class="floor-shadow tilted-shadow" style="bottom: -20px;"></div>
+            </div>
+            <div class="theme-badges" style="position: relative; justify-content: center; margin-top: 35px;">
+              <div class="theme-badge dark" style="padding: 12px 24px; font-size: 1rem;">🌙 Deep Dark Theme</div>
+            </div>
+          </div>
+
+          <!-- Light Mode (Right) -->
+          <div class="theme-column text-center">
+            <div class="mockup-wrapper-theme perspective-wrapper">
+              <img src="dark and white theme/right.png" alt="Vaultly Light Theme"
+                class="feature-mockup-framed feature-mockup-tilted-right"
+                style="max-width: 280px; margin: 0 auto; display: block;">
+              <div class="floor-shadow tilted-shadow" style="bottom: -20px;"></div>
+            </div>
+            <div class="theme-badges" style="position: relative; justify-content: center; margin-top: 35px;">
+              <div class="theme-badge light" style="padding: 12px 24px; font-size: 1rem;">☀️ Clean Light Theme</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Security & Privacy Section -->
+    <section id="security" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="pill-badge" style="color: var(--emerald); background: rgba(16, 185, 129, 0.1);">IRONCLAD
+            PRIVACY</span>
+          <h2>Your money data deserves a private experience.</h2>
+          <p>Vaultly makes security part of the product, not an afterthought. We've built the strictest security
+            measures right into your dashboard.</p>
+        </div>
+
+        <div class="security-grid reveal">
+          <div class="security-card">
+            <div class="security-icon-wrap"
+              style="--card-accent: var(--emerald); --card-glow: rgba(16, 185, 129, 0.15);">
+              <span>🔒</span>
+            </div>
+            <h3>App Lock & PIN</h3>
+            <p>Protect access to the app instantly upon closing it with a securely encrypted 4-digit PIN.</p>
+          </div>
+          <div class="security-card">
+            <div class="security-icon-wrap" style="--card-accent: var(--ocean); --card-glow: rgba(14, 165, 233, 0.15);">
+              <span>👆</span>
+            </div>
+            <h3>Biometric Unlock</h3>
+            <p>Use your device's native fingerprint or face scanner to quickly and securely bypass the PIN screen.</p>
+          </div>
+          <div class="security-card">
+            <div class="security-icon-wrap"
+              style="--card-accent: var(--primary); --card-glow: rgba(124, 58, 237, 0.15);">
+              <span>👁️</span>
+            </div>
+            <h3>Hide Amounts</h3>
+            <p>Tapping a button scrambles your portfolio numbers, keeping your financial summary safe from
+              shoulder-surfers in public.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Backup & Sync Section -->
+    <section class="section section-alt text-center reveal">
+      <div class="container">
+        <h2 class="mb-4">Never lose a transaction again.</h2>
+        <p class="text-support" style="max-width: 700px; margin: 0 auto; font-size: 1.15rem;">
+          Sign in for secure account-based cloud sync. Vaultly ensures your data travels securely with you
+          across sessions. For extreme peace of mind, Pro users can export entire data backups via JSON and CSV, then
+          restore them effortlessly.
+        </p>
+        <div style="margin-top: 40px; display: flex; justify-content: center; gap: 40px; position: relative;">
+          <!-- JSON Orb -->
+          <div style="width: 80px; height: 80px; border-radius: 50%; background: var(--surface); box-shadow: 0 12px 30px rgba(124, 58, 237, 0.25), inset 0 0 0 1px rgba(255,255,255,0.8); border: 1px solid rgba(124, 58, 237, 0.1); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem; color: var(--primary); animation: float 6s ease-in-out infinite; animation-delay: 0s;">
+            JSON
+          </div>
+          <!-- CSV Orb -->
+          <div style="width: 80px; height: 80px; border-radius: 50%; background: var(--surface); box-shadow: 0 12px 30px rgba(16, 185, 129, 0.25), inset 0 0 0 1px rgba(255,255,255,0.8); border: 1px solid rgba(16, 185, 129, 0.1); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem; color: var(--emerald); animation: float 6s ease-in-out infinite; animation-delay: -2s;">
+            CSV
+          </div>
+          <!-- PDF Orb -->
+          <div style="width: 80px; height: 80px; border-radius: 50%; background: var(--surface); box-shadow: 0 12px 30px rgba(255, 107, 138, 0.25), inset 0 0 0 1px rgba(255,255,255,0.8); border: 1px solid rgba(255, 107, 138, 0.1); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem; color: var(--expense-accent); animation: float 6s ease-in-out infinite; animation-delay: -4s;">
+            PDF
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing / Upgrade Section -->
+    <section id="pro" class="section">
+      <div class="container reveal">
+        <div class="section-header">
+          <h2>Unlock the full potential with Pro</h2>
+          <p>Go beyond basic tracking. Gain complete control of your budgets, recurring bills, data backup, and deep
+            customization.</p>
+        </div>
+
+        <div class="pricing-grid reveal">
+          <!-- Free -->
+          <div class="pricing-card">
+            <div class="price-header-wrap"
+              style="display: flex; justify-content: space-between; align-items: flex-start;">
+              <h3 class="price-title">Free</h3>
+              <span class="pill-badge"
+                style="background: rgba(124, 58, 237, 0.15); color: var(--primary); font-size: 0.75rem; padding: 4px 12px; margin-bottom: 0;">Basic</span>
+            </div>
+            <div class="price-amount">$0</div>
+            <ul class="pricing-features">
+              <li>Track expenses and income</li>
+              <li>Edit and delete transactions</li>
+              <li>View dashboard and monthly charts</li>
+              <li>Use 1 expense budget</li>
+              <li>Use the default accent theme</li>
+            </ul>
+            <a href="#download" class="btn btn-outline"
+              style="width: 100%; margin-top: auto; padding-left: 10px; padding-right: 10px; font-size: 0.85rem; white-space: nowrap;">Get
+              Started</a>
+          </div>
+
+          <!-- Pro Monthly -->
+          <div class="pricing-card">
+            <div class="price-header-wrap"
+              style="display: flex; justify-content: space-between; align-items: flex-start;">
+              <h3 class="price-title">Pro Monthly</h3>
+              <span class="pill-badge"
+                style="background: rgba(124, 58, 237, 0.15); color: var(--primary); font-size: 0.75rem; padding: 4px 12px; margin-bottom: 0;">Flexible</span>
+            </div>
+            <div class="price-amount">$2.99<span> / month</span></div>
+            <ul class="pricing-features">
+              <li>Unlimited budgets</li>
+              <li>Home widget access</li>
+              <li>Premium PDF report export</li>
+              <li>JSON and CSV backup tools</li>
+              <li>CSV import and restore</li>
+              <li>Recurring plans with reminders</li>
+              <li>Custom gallery profile image</li>
+              <li>Premium accent colors</li>
+              <li>App lock, PIN, biometric unlock, and hidden amounts</li>
+            </ul>
+            <a href="#download" class="btn btn-outline" style="width: 100%; margin-top: auto;">Start Monthly</a>
+          </div>
+
+          <!-- Pro Yearly -->
+          <div class="pricing-card popular" style="border: 2px solid var(--primary);">
+            <div class="price-header-wrap"
+              style="display: flex; justify-content: space-between; align-items: flex-start;">
+              <h3 class="price-title" style="margin-bottom: 5px;">Pro Yearly</h3>
+              <span class="pill-badge"
+                style="background: var(--primary); color: white; font-size: 0.75rem; padding: 4px 12px; margin-bottom: 0;">Best
+                Value</span>
+            </div>
+            <div class="price-amount">$24.99<span> / year</span></div>
+            <ul class="pricing-features">
+              <li>Everything in Pro Monthly</li>
+              <li>Lower yearly cost than paying monthly</li>
+              <li>Best option for regular users</li>
+              <li>Includes widgets, backups, recurring plans, and all security tools</li>
+            </ul>
+            <a href="#download" class="btn btn-primary" style="width: 100%; margin-top: auto;">Start Yearly</a>
+          </div>
+
+          <!-- Lifetime -->
+          <div class="pricing-card">
+            <div class="price-header-wrap"
+              style="display: flex; justify-content: space-between; align-items: flex-start;">
+              <h3 class="price-title">Lifetime</h3>
+              <span class="pill-badge"
+                style="background: rgba(124, 58, 237, 0.15); color: var(--primary); font-size: 0.75rem; padding: 4px 12px; margin-bottom: 0;">One-Time</span>
+            </div>
+            <div class="price-amount">$59.99<span> once</span></div>
+            <ul class="pricing-features">
+              <li>All current Pro features forever</li>
+              <li>No recurring payment</li>
+              <li>One-time unlock for long-term use</li>
+              <li>Includes widget, backups, recurring plans, premium accents, and security tools</li>
+            </ul>
+            <a href="#download" class="btn btn-outline" style="width: 100%; margin-top: auto;">Unlock Forever</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section section-alt">
+      <div class="container reveal">
+        <div class="section-header">
+          <h2>Frequently Asked Questions</h2>
+          <p>Find quick answers to common questions about Vaultly.</p>
+        </div>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              Is Vaultly available on iPhone?
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Vaultly is currently available for Android devices. You can find us on the Google Play Store. An iOS
+                version may be considered for the future.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              What does Vaultly Pro unlock?
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Vaultly Pro removes the 1-budget limit giving you unlimited tracking. It also unlocks powerful tools
+                such as local home widgets, App Lock (PIN and Biometrics), PDF/JSON/CSV data exports, recurring bill
+                tracking with reminders, and the ability to customize your app colors.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              Does Vaultly support recurring bills and reminders?
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Yes. Vaultly Pro lets you set up automatic, repeating plans for a salary, subscriptions, or utility
+                bills. We tie these together with push notifications and local reminders so you'll never miss an
+                important date.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              Can I export or restore my data?
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Absolutely. You own your data. Pro users can export all transaction history in CSV format for
+                spreadsheets, or JSON for full account backups. You can restore data back into Vaultly at any time from
+                CSV files.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              How does account deletion work?
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>You can instantly initiate account deletion via the in-app settings (Settings > Account > Delete
+                Account), which removes your synced data. You can also review our Account Deletion and Privacy Policy
+                pages for full compliance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section id="download" class="final-cta reveal">
+      <div class="container">
+        <div class="final-cta-box">
+          <h2 class="mb-4">Ready for a cleaner money dashboard?</h2>
+          <p class="text-support mb-8 text-center" style="font-size: 1.15rem;">Stop struggling with cluttered
+            spreadsheets. Start managing your expenses beautifully, right from your Android device.</p>
+          <div style="display: flex; justify-content: center;">
+            <a href="https://play.google.com/store/apps/details?id=app.vaultly.mobile" class="google-play-badge"
+              target="_blank">
+              <img src="playstore-mark.svg" alt="Play Store" style="width: 28px;">
+              <div>
+                <span class="gp-label">GET IT ON</span>
+                <span class="gp-title">Google Play</span>
+              </div>
+            </a>
+          </div>
+          <p class="mt-4 text-support" style="font-size: 0.9rem;">Available exclusively on Android.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-container" style="color: white; text-decoration: none;">
+            <img src="icon/icon.png" alt="Vaultly Logo" style="width: 36px; height: 36px;">
+            <span class="logo-text">Vaultly</span>
+          </div>
+          <p>Smart expense tracking for Android. Track spending, stay ahead of budgets, and manage money securely.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Support & Legal</h4>
+          <ul>
+            <li><a href="mailto:vaultly.app@gmail.com">Contact Support</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="account-deletion.html">Account Deletion</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pro">Pricing & Pro plans</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=app.vaultly.mobile" target="_blank">Google Play
+                Store</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Vaultly App. All rights reserved.</div>
+        <div>Designed for Android Devices. Google Play is a trademark of Google LLC.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
