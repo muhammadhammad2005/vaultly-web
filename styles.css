@@ -1423,7 +1423,11 @@ footer {
     margin-top: 40px;
   }
   .mockup-left, .mockup-right { display: none; }
-  .mockup-center { transform: scale(1); width: 100%; max-width: 320px; }
+  .mockup-center {
+    transform: translateX(-50%) scale(1); /* Restored horizontal centering */
+    width: 100%; 
+    max-width: 320px; 
+  }
   
   .feature-block, .feature-block.reverse {
     grid-template-columns: 1fr;
@@ -1461,6 +1465,13 @@ footer {
 
 @media (max-width: 480px) {
   .hero-content h1 { font-size: 1.8rem; }
+  
+  .hero-ctas {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  
   .btn { width: 100%; justify-content: center; margin-bottom: 12px; }
   
   /* Trust strip cleanup for small mobile */
